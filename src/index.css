@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@400;600;700;900&family=Noto+Sans+Display:wght@400;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+/*search and modal button style is here */
+.ant-input-group-addon > button,
+.ant-modal-footer > button:nth-child(2) {
+  background-color: rgba(237, 10, 10, 0.717) !important;
+}
+
+/* card title style is here */
+.ant-card-meta-title {
+  font-size: 18px !important;
+}
+
+/* card navlink styling */
+.anchor-decoration-removal a {
+  text-decoration: none;
+  flex-grow: 1;
+}
