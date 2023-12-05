@@ -8,7 +8,7 @@ const MovieCard = ({ id, title, description, posterUrl, rating }) => {
   return (
     <>
       <div className="">
-        <Link to={`${id}`}>
+        <Link to={`/${id}`}>
           <Card
             className="border-cyan-300 h-full"
             hoverable
