@@ -3,7 +3,7 @@ const MovieTrailer = ({ trailerId }) => {
   return (
     <>
       <div>
-        <div className="w-screen max-h-fit px-16">
+        <div className="w-screen max-h-fit px-8">
           <iframe
             className=" w-full aspect-video border-0 rounded-md"
             src={`https://www.youtube.com/embed/${trailerId}`}

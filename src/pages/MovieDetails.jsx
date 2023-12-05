@@ -84,7 +84,7 @@ const MovieDetails = () => {
         >
           {movie.title} / Official Trailer
         </p>
-        <div className="flex flex-col items-center justify-start my-2">
+        <div className="flex flex-col items-center justify-center my-2">
           <MovieTrailer trailerId={movie.trailer}></MovieTrailer>
           <Divider orientation="left">
             <strong>Description:</strong>
