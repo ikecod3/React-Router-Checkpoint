@@ -31,7 +31,7 @@ const MovieDetails = () => {
     findMovieById();
     const timeOut = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearTimeout(timeOut);
