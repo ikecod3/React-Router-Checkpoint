@@ -6,6 +6,8 @@ import MovieTrailer from "../components/MovieTrailer";
 import { Button, Divider } from "antd";
 import { LeftOutlined } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
+import { LoadingOutlined } from "@ant-design/icons";
+import { Spin } from "antd";
 
 const MovieDetails = () => {
   const { trailerByMovieId } = useParams();
@@ -36,15 +38,24 @@ const MovieDetails = () => {
     };
   }, []);
 
-  /** On default loading is truthy. while it is still truthy (2secs) dispplay/return processing request wrapped in an HTML element */
+  /** On default loading is truthy. while it is still truthy (2secs) display/return processing request wrapped in an HTML element */
   if (loading) {
     return (
-      <h2
-        className="flex items-center justify-center
-    h-screen"
-      >
-        Processing request...
-      </h2>
+      <div className="flex flex-col items-center justify-center h-screen">
+        {/* spin component */}
+        <Spin
+          className="text-red-700"
+          indicator={
+            <LoadingOutlined
+              style={{
+                fontSize: 40,
+              }}
+              spin
+            />
+          }
+        />
+        <h3 className="mx-auto">Processing request...</h3>
+      </div>
     );
   }
 
